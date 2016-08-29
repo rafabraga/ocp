@@ -1,4 +1,4 @@
-package assertion;
+package sete.assertion;
 
 public class Principal {
 

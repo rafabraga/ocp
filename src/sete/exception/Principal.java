@@ -1,4 +1,4 @@
-package exception;
+package sete.exception;
 
 public class Principal {
 
