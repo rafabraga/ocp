@@ -1,4 +1,4 @@
-package chapter.one.overridingmethodsobjectclass.covariantreturntypes;
+package chapter.two.overridingmethodsobjectclass.covariantreturntypes;
 
 class Test {
 	@SuppressWarnings("unused")

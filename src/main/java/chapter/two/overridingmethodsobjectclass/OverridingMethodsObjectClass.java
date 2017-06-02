@@ -1,4 +1,4 @@
-package chapter.one.overridingmethodsobjectclass;
+package chapter.two.overridingmethodsobjectclass;
 
 public class OverridingMethodsObjectClass {
 

@@ -1,4 +1,4 @@
-package chapter.one.overloadresolution;
+package chapter.two.overloadresolution;
 
 public class OverloadResolutionAmbiguos {
 

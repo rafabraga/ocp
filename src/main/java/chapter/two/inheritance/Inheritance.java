@@ -1,4 +1,4 @@
-package chapter.one.inheritance;
+package chapter.two.inheritance;
 
 import java.util.Arrays;
 

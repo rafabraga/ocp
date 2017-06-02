@@ -1,4 +1,4 @@
-package chapter.one.accessmodifier;
+package chapter.two.accessmodifier;
 
 public interface InterfaceTeste {
 
