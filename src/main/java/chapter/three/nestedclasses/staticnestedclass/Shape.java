@@ -3,6 +3,7 @@ package chapter.three.nestedclasses.staticnestedclass;
 public class Shape {
 
 	public static class Color {
+
 		int m_red, m_green, m_blue;
 
 		public Color() {

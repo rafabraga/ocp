@@ -1,15 +1,15 @@
 package chapter.four.collections.arraylist;
 
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class TestIterator {
 
 	public static void main(final String[] args) {
-		final ArrayList<Integer> nums = new ArrayList<Integer>();
-		for (int i = 1; i < 10; i++) {
-			nums.add(i);
-		}
+		final List<Integer> nums = IntStream.rangeClosed(1, 10).boxed().collect(Collectors.toList());
+
 		System.out.println("Original list " + nums);
 		final Iterator<Integer> numsIter = nums.iterator();
 		while (numsIter.hasNext()) {

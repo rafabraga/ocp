@@ -1,8 +1,10 @@
 package chapter.three.interfaces;
 
-public interface InterfaceTest {
+@FunctionalInterface
+public interface InterfaceTest2 { // extends InterfaceTest {
 
-	public abstract void pular();
+	// @Override
+	// public abstract void pular();
 
 	abstract void andar();
 
@@ -10,6 +12,7 @@ public interface InterfaceTest {
 		System.out.println("o.o");
 	}
 
+	// @Override
 	default void abaixar2() {
 		System.out.println("o.o [2]");
 	}
