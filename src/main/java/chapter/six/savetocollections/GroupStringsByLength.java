@@ -17,7 +17,7 @@ public class GroupStringsByLength {
 			words.forEach(System.out::println);
 		});
 
-		final Map<Object, List<String>> grupos = Arrays.stream(string).distinct().sorted()
+		final Map<Character, List<String>> grupos = Arrays.stream(string).distinct().sorted()
 				.collect(Collectors.groupingBy(word -> word.charAt(0)));
 		grupos.forEach((letra, palavras) -> {
 			System.out.printf("Palavras iniciadas com %s: %n", letra);

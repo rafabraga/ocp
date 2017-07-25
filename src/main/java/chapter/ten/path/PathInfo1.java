@@ -19,6 +19,7 @@ public class PathInfo1 {
 		for (final Path element : testFilePath) {
 			System.out.println("\t path element: " + element);
 		}
+		System.out.println(testFilePath.getName(1));
 	}
 
 }

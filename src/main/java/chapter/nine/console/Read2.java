@@ -3,6 +3,7 @@ package chapter.nine.console;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Read2 {
 
@@ -18,6 +19,12 @@ public class Read2 {
 			System.exit(-1);
 		}
 		System.out.println("You typed: " + str);
+
+		final Scanner scanner = new Scanner(System.in);
+		System.out.print("Type another character: ");
+		final String inputStr = scanner.next();
+		scanner.close();
+		System.out.println("You typed: " + inputStr);
 	}
 
 }

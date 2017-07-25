@@ -24,7 +24,10 @@ public class LocalDateTests {
 		System.out.println(natal);
 
 		final LocalDate natalFormatado = LocalDate.parse("2017-12-25");
-		System.out.println(natalFormatado.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+		System.out.println(natalFormatado.format(DateTimeFormatter.ofPattern("dd/MM/yyyy E (EEEE)")));
+
+		final DateTimeFormatter formatoPadrao = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		System.out.println(formatoPadrao.format(natal));
 
 		final LocalDate epochDay = LocalDate.ofEpochDay(365L);
 		System.out.println(epochDay);
