@@ -6,6 +6,8 @@ public class Shape {
 
 		int m_red, m_green, m_blue;
 
+		public final String myName = "John";
+
 		public Color() {
 			// call the other overloaded Color constructor by passing default
 			// values

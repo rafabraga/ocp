@@ -20,6 +20,8 @@ public class PathInfo1 {
 			System.out.println("\t path element: " + element);
 		}
 		System.out.println(testFilePath.getName(1));
+		System.out.println(testFilePath.subpath(2, 3));
+
 	}
 
 }

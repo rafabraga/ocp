@@ -6,6 +6,7 @@ public class Circle {
 	class Point {
 		private final int xPos;
 		private final int yPos;
+		public static final String NAME = "John";
 
 		// you can provide constructor for an inner class like this
 		public Point(final int x, final int y) {
@@ -17,7 +18,7 @@ public class Circle {
 		// here
 		@Override
 		public String toString() {
-			return "(" + this.xPos + "," + this.yPos + ")";
+			return NAME + ", (" + this.xPos + "," + this.yPos + ")";
 		}
 	}
 
@@ -38,6 +39,7 @@ public class Circle {
 
 	public static void main(final String[] s) {
 		System.out.println(new Circle(10, 10, 20));
+		System.out.println(new Circle(10, 10, 20).new Point(1, 0));
 	}
 	// other methods such as area are elided
 

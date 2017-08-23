@@ -7,12 +7,14 @@ class StatusReporter {
 	static Shape.Color getDescriptiveColor(final Shape.Color color) {
 		// local class DescriptiveColor that extends Shape.Color class
 		class DescriptiveColor extends Shape.Color {
+			public static final String NAME = "John";
+
 			@Override
 			public String toString() {
 				// Local variable color defined in an enclosing scope must be
 				// final or effectively final
 				// color = new Shape.Color();
-				return "You selected a color with RGB values" + color;
+				return NAME + ", you selected a color with RGB values" + color;
 			}
 		}
 		return new DescriptiveColor();

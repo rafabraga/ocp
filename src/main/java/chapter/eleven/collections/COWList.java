@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class COWList {
+public abstract class COWList {
 
 	public static void main(final String[] args) {
 		final List<String> aList = new CopyOnWriteArrayList<>();
@@ -18,6 +18,11 @@ public class COWList {
 			aList.add("four");
 		}
 		System.out.println(aList);
+
+		/*
+		 * Se tentasse adicionar elementos em um arrayList no while, ia estourar
+		 * exception!
+		 */
 	}
 
 }

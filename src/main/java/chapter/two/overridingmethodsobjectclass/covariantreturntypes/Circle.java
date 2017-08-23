@@ -10,5 +10,9 @@ class Circle extends Shape {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	void test(final String s) {
+		System.out.println("In method test().");
+	}
 	// other methods elided
 }

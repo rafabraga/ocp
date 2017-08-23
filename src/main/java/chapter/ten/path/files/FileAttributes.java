@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.UserPrincipal;
 import java.util.Map;
 
 public class FileAttributes {
@@ -24,6 +25,11 @@ public class FileAttributes {
 		System.out.println("File last accessed time: " + fileAttributes.lastAccessTime());
 		System.out.println("File last modified time: " + fileAttributes.lastModifiedTime());
 		System.out.println("File creation time: " + fileAttributes.creationTime());
+
+		System.out.println("----");
+
+		final UserPrincipal owner = Files.getOwner(path);
+		System.out.println(owner);
 	}
 
 }

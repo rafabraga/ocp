@@ -8,9 +8,11 @@ class StatusReporter {
 		// -- specifically, there is no name for the class and we construct
 		// and use the class "on the fly" in the return statement!
 		return new Shape.Color() {
+			public static final String NAME = "John";
+
 			@Override
 			public String toString() {
-				return "You selected a color with RGB values" + color;
+				return NAME + ", you selected a color with RGB values" + color;
 			}
 		};
 	}

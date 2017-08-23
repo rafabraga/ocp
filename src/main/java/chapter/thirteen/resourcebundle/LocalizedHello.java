@@ -6,9 +6,11 @@ import java.util.ResourceBundle;
 public class LocalizedHello {
 
 	public static void main(final String[] args) {
-		final Locale currentLocale = Locale.ITALY;
+		final Locale currentLocale = Locale.CHINA;
+		Locale.setDefault(Locale.ENGLISH);
 		final ResourceBundle resBundle = ResourceBundle.getBundle("ResourceBundle", currentLocale);
-		System.out.printf(resBundle.getString("Greeting"));
+		System.out.printf(resBundle.getString("Greeting_2"));
+
 	}
 
 }
