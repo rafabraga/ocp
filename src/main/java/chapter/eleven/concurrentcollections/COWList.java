@@ -1,4 +1,4 @@
-package chapter.eleven.collections;
+package chapter.eleven.concurrentcollections;
 
 import java.util.Iterator;
 import java.util.List;
