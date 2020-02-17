@@ -3,6 +3,44 @@ package book_two.chapter.two.polymorphism;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * <table>
+ * <tr>
+ * <th></th>
+ * <th>Sobrecarga</th>
+ * <th>Sobrescrita</th>
+ * </tr>
+ * <tr>
+ * <td>Argumentos</td>
+ * <td>Devem mudar</td>
+ * <td>NAO podem mudar</td>
+ * </tr>
+ * <tr>
+ * <td>Retorno</td>
+ * <td>Podem mudar</td>
+ * <td>Retorno "covariante"</td>
+ * </tr>
+ * <tr>
+ * <td>Excecoes</td>
+ * <td>Podem mudar</td>
+ * <td>Pode diminuir ou remover. Nao pode disparar <br>
+ * checked exception nova ou mais abrangente.</td>
+ * </tr>
+ * <tr>
+ * <td>Acesso</td>
+ * <td>Pode mudar</td>
+ * <td>Nao pode ficar mais restritivo</td>
+ * </tr>
+ * <tr>
+ * <td>Invocacao</td>
+ * <td>Reference type</td>
+ * <td>Object type</td>
+ * </tr>
+ * </table>
+ *
+ * @author rafael
+ *
+ */
 public class Polimorfismo {
 
     public static class Veiculo {
@@ -18,6 +56,7 @@ public class Polimorfismo {
             System.out.println("Oi?!");
         }
 
+        // ------ Sobrescrita
         protected Veiculo boraSobrescrever(final Veiculo veiculo) {
             return new Veiculo();
         }
@@ -32,6 +71,15 @@ public class Polimorfismo {
 
         protected Veiculo boraSobrescreverComCheckedExceptionAgain(final Veiculo veiculo) throws IOException {
             return new Veiculo();
+        }
+
+        // ------ Sobrecarga
+        protected void boraSobrecarregar() {
+            System.out.println("BOM dia!");
+        }
+
+        protected void boraSobrecarregarComException() throws IOException {
+            System.out.println("BOM dia!");
         }
     }
 
@@ -51,6 +99,7 @@ public class Polimorfismo {
             System.out.println("Nada kkk.");
         }
 
+        // ------ Sobrescrita
         /**
          * Pode retornar um subtipo, mas os argumentos devem ser do mesmo tipo.
          *
@@ -85,6 +134,19 @@ public class Polimorfismo {
         @Override
         protected Veiculo boraSobrescreverComCheckedExceptionAgain(final Veiculo veiculo) {
             return new Veiculo();
+        }
+
+        // ------ Sobrecarga
+        protected String boraSobrecarregar(final String nome) throws Exception {
+            return "BOM dia, " + nome;
+        }
+
+        protected String boraSobrecarregarComException(final String nome) throws Exception {
+            return "BOM dia, " + nome;
+        }
+
+        protected String boraSobrecarregarComException(final String nome, final String sobrenome) throws FileNotFoundException {
+            return "BOM dia, " + nome + " " + sobrenome;
         }
     }
 
