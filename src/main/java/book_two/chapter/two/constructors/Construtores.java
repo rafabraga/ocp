@@ -5,6 +5,16 @@ package book_two.chapter.two.constructors;
  *
  * O construtor default eh aquele fornecido pelo compilador.
  *
+ * O construtor default tem o mesmo modifificador de acesso da classe.
+ *
+ * O compilador acrescenta um super() na primeira linha dos construtores que nao
+ * possuirem super() ou this().
+ *
+ * Construtores não são herdados.
+ *
+ * Construtores não podem ser sobrescritos (até porque apenas métodos de
+ * instância podem).
+ *
  * @author usuario
  *
  */
@@ -23,8 +33,20 @@ public class Construtores {
 
 		static int a;
 
-		public ConstrutoresCheiosDeArgumentos() {
+		public ConstrutoresCheiosDeArgumentos(final int i) {
 			super(a);
+		}
+
+	}
+
+	public static class ConstrutoresRebeldes extends ConstrutoresCheiosDeArgumentos {
+
+		/**
+		 * Sou obrigado a criar um construtor assim porque a classe pai nao tem um
+		 * construtor default.
+		 */
+		public ConstrutoresRebeldes() {
+			super(3);
 		}
 
 	}
