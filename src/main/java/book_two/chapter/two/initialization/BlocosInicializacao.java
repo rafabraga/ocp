@@ -2,6 +2,15 @@ package book_two.chapter.two.initialization;
 
 public class BlocosInicializacao {
 
+	public static void metodoStatic1() {
+
+	}
+
+	// Sobrecarga de método static
+	public static void metodoStatic1(final int i) {
+
+	}
+
 	public static class BlocosInicializacaoInner extends BlocosInicializacao {
 
 		public BlocosInicializacaoInner() {
@@ -22,6 +31,10 @@ public class BlocosInicializacao {
 
 		static {
 			System.out.println("Bloco de inicialização static 2 inner.");
+		}
+
+		public static void metodoStatic1() {
+
 		}
 
 	}

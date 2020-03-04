@@ -46,7 +46,17 @@ public class Construtores {
 		 * construtor default.
 		 */
 		public ConstrutoresRebeldes() {
-			super(3);
+			// Só da pra chamar metodos static
+			super(metodoRebelde());
+
+		}
+
+		public static int metodoRebelde() {
+			return 1;
+		}
+
+		public int metodoMuitoRebelde() {
+			return 1;
 		}
 
 	}
